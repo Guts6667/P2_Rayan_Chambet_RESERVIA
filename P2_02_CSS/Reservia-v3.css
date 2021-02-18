@@ -40,7 +40,7 @@ nav div{
     color: #0065FC ;
 }
 .box-inscription{
-    padding: 0px 10px 0px 10px;
+    padding: 0px 30px 0px 10px;
     
 }
 @media all and (max-width:768px){
@@ -60,9 +60,14 @@ nav div{
 }
 
 /* SECTION SEARCH */
+.search-section{
+    padding: 20px;
+}
 .search-bar form{
     display: flex;
     flex-direction: row;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 @media all and (max-width:768px){
     .search-bar{
@@ -211,22 +216,40 @@ button{
 .container-hebergement{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 20px 0px 20px;
 }
 @media all and (max-width:1080px){
     .container-hebergement{
-        flex-flow: column-reverse;
-    }
+        flex-flow: column-reverse; }
 }
-section, aside{
+.section-articles-main{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    margin-right: 20px;
+}
+.section-articles-main, aside{
     background-color: #F2F2F2;
     border: hidden;
     border-radius: 18px;
-    padding: 15px;
+    padding: 20px;
+}
+@media all and (max-width:1080px){
+    .section-articles-main{
+        background-color: white;
+    }
+}
+.container-articles-main{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 .container-articles{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    align-content: space-around;
 }
 .box-hebergements{
     border: solid white;
@@ -234,31 +257,22 @@ section, aside{
 	border-radius: 15px;
 	overflow: hidden;
 	box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
-	margin: 5px;
+	margin: 10px;
     width: 250px;
-}
-@media all and (max-width:1080px){
-    .box-hebergements{
-        width: 90%;
-    }
 }
 @media all and (max-width:768px){
     .box-hebergements{
-        width: 90%;
+        width: 350px;
     }
 }
 
 .picture{
-	height: 140px;
+	height: 120px;
 	background-position: center;
     background-size: cover;
     width: 100%;
 }
-@media all and (max-width:786px){
-    .picture{
-        height: 160px;
-    }
-}
+
 .box-content{
     padding: 5px 5px 5px 15px;
     line-height: 3px;
@@ -266,12 +280,26 @@ section, aside{
     background-color: white;
 }
 /* ASIDE */
+aside{
+    display: flex;
+    flex-direction: column;
+}
+@media all and (max-width:768px){
+    aside{
+        border-radius: 0px;
+    }
+}
+
+.aside-article-container{
+    display: flex;
+    flex-direction: column;
+}
 @media all and (max-width:1080px){
     .aside-container{
         display: flex;
         flex-direction: column;
         align-items: center;
-        align-content: space-around;
+        align-content:space-around;
     }
     .aside-article-container{
         display: flex;
@@ -279,7 +307,6 @@ section, aside{
         justify-content: space-evenly;
     }
 }
-
 .aside-title{
     display: flex;
     flex-direction: row;
@@ -287,14 +314,6 @@ section, aside{
 }
 .aside-title :nth-child(1){
     flex-grow: 1;
-}
-@media all and (max-width:1080px){
-    .aside-icone{
-        display: none;
-    }
-    .aside-title{
-        text-align: center;
-    }
 }
 .box-hebergements-aside{ 
     display: flex;
@@ -304,26 +323,74 @@ section, aside{
 	border-radius: 15px;
 	overflow: hidden;
 	box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
-	margin: 5px;
-    width: 450px;
-    display: flex; 
-    flex-direction: row;
+    width: 350px;
+    margin: 15px;
 }
-
 .picture-aside{
 	height: 160px;
 	background-position: center;
     background-size: cover;
     width: 100%
 }
-.box-content{
+.box-content-aside{
     padding: 5px 5px 20px 15px;
-    line-height: 3px;
+    line-height: 15px;
     width: 100%;
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+/* SECTION ACTIVITÉS */
+.section-activites{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.container-col-activites{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.col-activites{
+    display: flex;
+    flex-direction: column;
+}
+.col-2{
+
+    justify-content: space-around;
+}
+.box-activites{
+    border: solid white;
+	border-width: 2px;
+	border-radius: 15px;
+	overflow: hidden;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+	margin: 10px;
+    width: 300px;
+    height: 400px;
+}
+.half{
+    height: 180px;
+}
+
+.picture-activites{
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 85%;
+}
+.small-pic{
+    height: 70%;
+}
+@media all and (max-width:768px){
+    .box-activites{
+        height: 180px;
+        width: 350px;
+    }
+    .picture-activites{
+        height: 70%;
+    }
 }
 /*BACKGROUND COLORS*/
 .purple
