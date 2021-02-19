@@ -9,8 +9,7 @@ body{
     font-family: 'raleway', Arial, Helvetica, sans-serif;
     margin: 0;
 }
-a
-{
+a{
     text-decoration: none;
     color: black;
 }
@@ -345,7 +344,9 @@ aside{
 .section-activites{
     display: flex;
     flex-direction: column;
-    margin: 20px;
+}
+.activites-title{
+    padding-left: 20px;
 }
 .container-col-activites{
     display: flex;
@@ -392,52 +393,22 @@ aside{
         height: 70%;
     }
 }
-/*BACKGROUND COLORS*/
-.purple
-{
-    border-style: solid;
-    border-color: purple;
+/*Footer*/
+footer{
+    background-color: #F2F2F2;
+    display: flex;
 }
-.pink
-{
-    border-style: solid;
-    border-color: pink;
+@media all and (max-width:768px){
+    footer{
+        flex-direction: column;
+    }
 }
-.green
-{
-    border-style: solid;
-    border-color: green;
+footer div{
+    flex-grow: 1;
+    padding-left: 20px;
 }
-.blue
-{
-    border-style: solid;
-    border-color: steelblue;
-}
-.grey
-{
-    border-style: solid;
-    border-color: gainsboro;
-}
-.orange
-{
-    border-style: solid;
-    border-color: orange;
-}
-.yellow
-{
-    border-style: solid;
-    border-color: gold;
-}
-.red
-{
-    border-style: solid;
-    border-color: tomato;
-}
-.black
-{
-    border-style: solid;
-    border-color: black;
-}
+
+/*COLORS*/
 .blue-reservia
 {
     color: #0065FC;
