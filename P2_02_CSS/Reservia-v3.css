@@ -166,6 +166,11 @@ button{
     display: flex;
     flex-flow: row wrap;
 }
+@media all and (max-width:768px){
+    .filter-title{
+        width: 100%;
+    }
+}
 .filter-button{
     display: flex;
     flex-direction: row;
