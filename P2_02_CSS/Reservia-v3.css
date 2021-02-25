@@ -4,7 +4,9 @@
     font-family: 'raleway';
     src: url('../P2_04_FONT/raleway/Raleway-Regular.ttf') format('ttf');
 }
-
+html{
+    margin: 0;
+}
 body{
     font-family: 'raleway', Arial, Helvetica, sans-serif;
     margin: 0;
@@ -189,10 +191,12 @@ button{
 .filter-button-icon{
     display: flex;
     justify-content: center;
+    align-items: center;
     border-style: none;
     background-color: #DEEBFF;
     border-radius: 20px;
-    padding: 12px;
+    padding: 10px;
+    height: 20px;
     width: 20px;
 }
 .filter-button-text{
@@ -220,41 +224,49 @@ button{
 .container-hebergement{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 0px 20px 0px 20px;
+    justify-content: space-around;
 }
 @media all and (max-width:1080px){
     .container-hebergement{
-        flex-flow: column-reverse; }
+        flex-flow: column-reverse;
+        margin: 0 0;
+    }
 }
 .section-articles-main{
     display: flex;
     flex-direction: column;
     align-content: space-between;
-    margin-right: 20px;
+    width: 60%;
 }
 .section-articles-main, aside{
     background-color: #F2F2F2;
     border: hidden;
     border-radius: 18px;
-    padding: 20px;
+    padding: 0 10px;
+
 }
 @media all and (max-width:1080px){
     .section-articles-main{
         background-color: white;
+        width: 100%;
+        padding: 0;
     }
+}
+.hebergements-titles{
+    padding: 0 35px;
 }
 .container-articles-main{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    padding: 20px;
 }
-.container-articles{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-content: space-around;
+@media all and (max-width:768px){
+    .container-articles-main{
+        justify-content: center;
+    }
 }
+
 .box-hebergements{
     border: solid white;
 	border-width: 2px;
@@ -262,11 +274,17 @@ button{
 	overflow: hidden;
 	box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
 	margin: 10px;
-    width: 250px;
+    flex-basis: 30%;
+}
+
+@media all and (max-width:1080px){
+    .box-hebergements{
+        flex-basis: 45%;
+    }
 }
 @media all and (max-width:768px){
     .box-hebergements{
-        width: 350px;
+        flex-basis: 100%;
     }
 }
 
@@ -287,13 +305,23 @@ button{
 aside{
     display: flex;
     flex-direction: column;
+    flex-basis: 30%;
 }
-@media all and (max-width:768px){
+@media all and (max-width:1080px){
     aside{
-        border-radius: 0px;
+        border-radius: 0;
+        flex-basis: 100%;
     }
 }
-
+.aside-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 20px;
+}
+.aside-title :nth-child(1){
+    flex-grow: 1;
+}
 .aside-article-container{
     display: flex;
     flex-direction: column;
@@ -307,18 +335,11 @@ aside{
     }
     .aside-article-container{
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: column;
         justify-content: space-evenly;
     }
 }
-.aside-title{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.aside-title :nth-child(1){
-    flex-grow: 1;
-}
+
 .box-hebergements-aside{ 
     display: flex;
     flex-direction: row;
@@ -327,7 +348,7 @@ aside{
 	border-radius: 15px;
 	overflow: hidden;
 	box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
-    width: 350px;
+    flex-basis: 100%;
     margin: 15px;
 }
 .picture-aside{
@@ -335,6 +356,14 @@ aside{
 	background-position: center;
     background-size: cover;
     width: 100%
+}
+@media all and (max-width: 1080px){
+    .box-hebergements-aside{
+        flex-basis: 100%;
+    }
+    .picture-aside{
+        flex-basis: 100%;
+    }
 }
 .box-content-aside{
     padding: 5px 5px 20px 15px;
