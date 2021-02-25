@@ -235,7 +235,7 @@ button{
 .section-articles-main{
     display: flex;
     flex-direction: column;
-    align-content: space-between;
+    align-content: space-around;
     width: 60%;
 }
 .section-articles-main, aside{
@@ -380,7 +380,7 @@ aside{
     flex-direction: column;
 }
 .activites-title{
-    padding-left: 20px;
+    padding-left: 35px;
 }
 .container-col-activites{
     display: flex;
@@ -390,9 +390,19 @@ aside{
 .col-activites{
     display: flex;
     flex-direction: column;
+    flex-basis: 22%;
+}
+@media all and (max-width:1080px){
+    .col-activites{
+        flex-basis: 45%;    
+    }
+}
+@media all and (max-width:768px){
+    .col-activites{
+        flex-basis: 90%;
+    }
 }
 .col-2{
-
     justify-content: space-around;
 }
 .box-activites{
@@ -402,8 +412,8 @@ aside{
 	overflow: hidden;
 	box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
 	margin: 10px;
-    width: 300px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
 }
 .half{
     height: 180px;
@@ -421,7 +431,8 @@ aside{
 @media all and (max-width:768px){
     .box-activites{
         height: 180px;
-        width: 350px;
+        flex-basis: 100%;
+        margin: 10px 0;
     }
     .picture-activites{
         height: 70%;
