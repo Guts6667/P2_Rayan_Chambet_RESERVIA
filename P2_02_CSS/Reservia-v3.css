@@ -4,9 +4,7 @@
     font-family: 'raleway';
     src: url('../P2_04_FONT/raleway/Raleway-Regular.ttf') format('ttf');
 }
-html{
-    margin: 0;
-}
+
 body{
     font-family: 'raleway', Arial, Helvetica, sans-serif;
     margin: 0;
@@ -21,42 +19,58 @@ header{
     display: flex;
     align-items: center;
     flex-flow: row wrap;
+    padding: 0 20px;
 }
 header :nth-child(1){
     flex-grow: 1;
 }
-.logo, .box-inscription{
-    padding: 20px;
-}
+
 nav{
     display: flex;
     flex-direction: row;
     text-align: center;
 }
-nav div{
-    padding: 0px 10px 0px 10px;
+.nav-link{
+    padding-right: 20px;
 }
-.nav-link:hover{
+.nav-link a{
+    display: inline-block;
+    padding: 10px 0;
+}
+.nav-link a:hover{
     border-top: 2px solid #0065FC;
+    padding-top: 8px;
     color: #0065FC ;
 }
-.box-inscription{
-    padding: 0px 30px 0px 10px;
-    
-}
+
 @media all and (max-width:768px){
+    header{
+        padding: 0;
+    }
+    header > *:first-child{
+        padding-left: 20px;
+    }
+    header > *:last-child{
+        padding-right: 20px;
+    }
     nav{
         order: 3;
         width: 100%;
     }
     .nav-link{
-        width: 50%;;
-        border-bottom: solid 3px rgb(211, 205, 205);
+        padding-right: 0;
+        width: 50%;
     }
-    .nav-link:hover{
-        border-bottom: 2px solid #0065FC;
-        border-top: none;
-        color: #0065FC ;;
+    .nav-link a{
+        width: 100%;
+        border-bottom: 3px solid rgb(211, 205, 205);
+    }
+    .nav-link a:hover{
+        border-bottom: 3px solid #0065FC;
+        border-top: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: #0065FC ;
     }
 }
 
