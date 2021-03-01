@@ -176,6 +176,10 @@ button{
     font-weight: bold;
     font-size: 1em;
 }
+.search-button:active{
+    background-color: white;
+    color: #0065FC;
+}
 
 /* FILTERS */
 .filter-container{
