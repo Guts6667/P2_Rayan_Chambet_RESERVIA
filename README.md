@@ -6,4 +6,4 @@ Reservia was my first project as a web developer. The purpose of it was to creat
 Please check it on : https://guts6667.github.io/P2_01_Rayan_Chambet_RESERVIA/
 
 
-../P2_03_IMAGES/examples/example_iPad.png
+![alt text](../P2_03_IMAGES/examples/example_iPad.png)
